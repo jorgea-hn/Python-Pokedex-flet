@@ -7,11 +7,18 @@ async def main(page: ft.page):
     page.window_resizable = False
     page.padding = 0
 
+
+    boton_azul = ft.Stack([
+            ft.Container(width=80,height=80,bgcolor=ft.colors.WHITE ,border_radius=50),
+            ft.Container(width=70,height=70,left=4, top=3, bgcolor=ft.colors.BLUE, border_radius=50),
+            
+    ])
+
     items_superior=[
-        ft.Container(width=80, height=80, border=ft.border.all()),
-        ft.Container(width=40, height=40, border=ft.border.all()),
-        ft.Container(width=40, height=40, border=ft.border.all()),
-        ft.Container(width=40, height=40, border=ft.border.all())
+        ft.Container(boton_azul, width=80, height=80, border=ft.border.all()),
+        ft.Container(width=40, height=40, border=ft.border.all(), bgcolor=ft.colors.RED_200, border_radius=50),
+        ft.Container(width=40, height=40, border=ft.border.all(), bgcolor=ft.colors.YELLOW, border_radius=50),
+        ft.Container(width=40, height=40, border=ft.border.all(), bgcolor=ft.colors.GREEN, border_radius=50)
     ]
 
     superior = ft.Container(content=ft.Row(items_superior), width=600, height=80,margin=ft.margin.only(top=40), border=ft.border.all())
